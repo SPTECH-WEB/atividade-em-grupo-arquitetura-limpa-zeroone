@@ -1,6 +1,7 @@
 package com.zeroone.at2.domain;
 
 import com.zeroone.at2.domain.valueobject.Email;
+import com.zeroone.at2.domain.valueobject.Telefone;
 
 import java.util.UUID;
 
@@ -9,13 +10,13 @@ public class Cliente {
     private UUID id;
     private String nome;
     private Email email;
-    private String telefone;
+    private Telefone telefone;
     private String cpf;
     private Double rendaMensal;
     private Integer idade;
     private String profissao;
 
-    public Cliente(UUID id, String nome, Email email, String telefone, String cpf, Double rendaMensal, Integer idade, String profissao) {
+    public Cliente(UUID id, String nome, Email email, Telefone telefone, String cpf, Double rendaMensal, Integer idade, String profissao) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -50,11 +51,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public String getTelefone() {
+    public Telefone getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(Telefone telefone) {
         this.telefone = telefone;
     }
 
