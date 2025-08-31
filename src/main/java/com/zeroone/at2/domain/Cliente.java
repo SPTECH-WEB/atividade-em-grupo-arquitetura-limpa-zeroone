@@ -1,6 +1,7 @@
 package com.zeroone.at2.domain;
 
 import com.zeroone.at2.domain.valueobject.Email;
+import com.zeroone.at2.domain.valueobject.Idade;
 import com.zeroone.at2.domain.valueobject.Nome;
 import com.zeroone.at2.domain.valueobject.Telefone;
 
@@ -14,10 +15,10 @@ public class Cliente {
     private Telefone telefone;
     private String cpf;
     private Double rendaMensal;
-    private Integer idade;
+    private Idade idade;
     private String profissao;
 
-    public Cliente(UUID id, Nome nome, Email email, Telefone telefone, String cpf, Double rendaMensal, Integer idade, String profissao) {
+    public Cliente(UUID id, Nome nome, Email email, Telefone telefone, String cpf, Double rendaMensal, Idade idade, String profissao) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -76,11 +77,11 @@ public class Cliente {
         this.rendaMensal = rendaMensal;
     }
 
-    public Integer getIdade() {
+    public Idade getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(Idade idade) {
         this.idade = idade;
     }
 
