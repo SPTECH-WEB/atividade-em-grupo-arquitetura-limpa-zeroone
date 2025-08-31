@@ -16,7 +16,7 @@ public class CadastrarClienteUseCase {
     public Cliente executar(Nome nome,
                             Email email,
                             Telefone telefone,
-                            Cpf cpf,
+                            String cpf,
                             RendaMensal rendaMensal,
                             Idade idade,
                             String profissao) {

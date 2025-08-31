@@ -10,12 +10,12 @@ public class Cliente {
     private Nome nome;
     private Email email;
     private Telefone telefone;
-    private Cpf cpf;
+    private String cpf;
     private RendaMensal rendaMensal;
     private Idade idade;
     private String profissao;
 
-    public Cliente(UUID id, Nome nome, Email email, Telefone telefone, Cpf cpf, RendaMensal rendaMensal, Idade idade, String profissao) {
+    public Cliente(UUID id, Nome nome, Email email, Telefone telefone, String cpf, RendaMensal rendaMensal, Idade idade, String profissao) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -58,11 +58,11 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public Cpf getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(Cpf cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
