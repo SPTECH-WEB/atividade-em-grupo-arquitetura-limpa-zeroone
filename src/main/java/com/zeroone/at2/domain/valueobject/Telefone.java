@@ -3,14 +3,19 @@ package com.zeroone.at2.domain.valueobject;
 public class Telefone {
     private String value;
 
-    public Boolean validarTelefone(){
+    public static Telefone of(String value){
+        return new Telefone(value);
+    }
+
+    private Boolean validarTelefone(){
+        assert value != null;
         return value.length() < 10;
     }
 
-    public Telefone(String value) {
-        if(!validarTelefone()){
-            throw new IllegalArgumentException("telefone invalido");
-        }
+    private Telefone(String value) {
+        //if(!validarTelefone()){
+         //   throw new IllegalArgumentException("telefone invalido");
+        //}
         this.value = value;
     }
 

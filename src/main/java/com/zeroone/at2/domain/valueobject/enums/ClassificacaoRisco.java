@@ -27,13 +27,13 @@ public enum ClassificacaoRisco {
         return prioridade;
     }
 
-    public static ClassificacaoRisco of(RendaMensal renda, Idade idade) {
+    public static ClassificacaoRisco of(Double renda, Integer idade) {
         if (renda == null || idade == null) {
             throw new ArgumentoInvalidoException("Renda e idade não podem ser nulos");
         }
 
-        double valorRenda = renda.getValue();
-        int valorIdade = idade.getValue();
+        double valorRenda = renda;
+        int valorIdade = idade;
 
         if (valorRenda > 6000 && valorIdade > 30) {
             return BAIXO;

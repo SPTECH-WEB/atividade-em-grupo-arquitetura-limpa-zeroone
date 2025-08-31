@@ -10,12 +10,38 @@ public class Cliente {
     private Nome nome;
     private Email email;
     private Telefone telefone;
-    private String cpf;
+    private Cpf cpf;
     private RendaMensal rendaMensal;
     private Idade idade;
     private String profissao;
 
-    public Cliente(UUID id, Nome nome, Email email, Telefone telefone, String cpf, RendaMensal rendaMensal, Idade idade, String profissao) {
+    public static Cliente newCliente(String nome, String email, String telefone, String cpf, Double rendaMensal, Integer idade, String profissao){
+        return new Cliente(
+                UUID.randomUUID(),
+                Nome.of(nome),
+                Email.of(email),
+                Telefone.of(telefone),
+                Cpf.of(cpf),
+                RendaMensal.of(rendaMensal, idade),
+                Idade.of(idade),
+                profissao
+        );
+    }
+
+    public static Cliente existingClient(String id, String nome, String email, String telefone, String cpf, Double rendaMensal, Integer idade, String profissao){
+        return new Cliente(
+                UUID.fromString(id),
+                Nome.of(nome),
+                Email.of(email),
+                Telefone.of(telefone),
+                Cpf.of(cpf),
+                RendaMensal.of(rendaMensal, idade),
+                Idade.of(idade),
+                profissao
+        );
+    }
+
+    private Cliente(UUID id, Nome nome, Email email, Telefone telefone, Cpf cpf, RendaMensal rendaMensal, Idade idade, String profissao) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -58,11 +84,11 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public String getCpf() {
+    public Cpf getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(Cpf cpf) {
         this.cpf = cpf;
     }
 

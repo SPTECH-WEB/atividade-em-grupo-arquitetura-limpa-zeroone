@@ -13,26 +13,8 @@ public class CadastrarClienteUseCase {
         this.clienteRepository = clienteRepository;
     }
 
-    public Cliente executar(Nome nome,
-                            Email email,
-                            Telefone telefone,
-                            String cpf,
-                            RendaMensal rendaMensal,
-                            Idade idade,
-                            String profissao) {
-        Cliente cliente = new Cliente(
-                UUID.randomUUID(),
-                nome,
-                email,
-                telefone,
-                cpf,
-                rendaMensal,
-                idade,
-                profissao
-        );
-
-        clienteRepository.salvar(cliente);
-        return cliente;
+    public Cliente executar(Cliente cliente) {
+        return clienteRepository.salvar(cliente);
     }
 }
 

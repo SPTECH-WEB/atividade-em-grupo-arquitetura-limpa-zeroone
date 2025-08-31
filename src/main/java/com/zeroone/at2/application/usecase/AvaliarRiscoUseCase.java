@@ -5,8 +5,8 @@ import com.zeroone.at2.domain.valueobject.enums.ClassificacaoRisco;
 
 public class AvaliarRiscoUseCase {
 
-    public ClassificacaoRisco avaliarRisco(Cliente cliente) {
-        return ClassificacaoRisco.of(cliente.getRendaMensal(), cliente.getIdade());
-    }
+   // public ClassificacaoRisco avaliarRisco(Cliente cliente) {
+       // return ClassificacaoRisco.of(cliente.getRendaMensal(), cliente.getIdade());
+    //}
 }
 

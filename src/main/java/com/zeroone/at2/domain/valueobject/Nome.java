@@ -7,7 +7,11 @@ public class Nome {
         return value != null && !value.isBlank() && value.length() >= 3;
     }
 
-    public Nome(String value){
+    public static Nome of(String value){
+        return new Nome(value);
+    }
+
+    private Nome(String value){
         if (!validarNome(value)){
             throw new IllegalArgumentException("Nome inválido.");
         }
