@@ -1,5 +1,7 @@
 package com.zeroone.at2.domain.valueobject;
 
+import com.zeroone.at2.domain.shared.ArgumentoInvalidoException;
+
 public class Idade {
     private Integer value;
 
@@ -13,7 +15,7 @@ public class Idade {
 
     private Idade(Integer value){
         if (!validarIdade(value)){
-            throw new IllegalArgumentException("Idade inválida.");
+            throw new ArgumentoInvalidoException("Idade inválida.");
         }
         this.value = value;
     }
@@ -24,7 +26,7 @@ public class Idade {
 
     public void setValue(Integer value) {
         if(!validarIdade(value)){
-            throw new IllegalArgumentException("Idade inválida.");
+            throw new ArgumentoInvalidoException("Idade inválida.");
         }
         this.value = value;
     }

@@ -1,5 +1,7 @@
 package com.zeroone.at2.domain.valueobject;
 
+import com.zeroone.at2.domain.shared.ArgumentoInvalidoException;
+
 public class Nome {
     private String value;
 
@@ -13,7 +15,7 @@ public class Nome {
 
     private Nome(String value){
         if (!validarNome(value)){
-            throw new IllegalArgumentException("Nome inválido.");
+            throw new ArgumentoInvalidoException("Nome inválido.");
         }
         this.value = value;
     }
@@ -24,7 +26,7 @@ public class Nome {
 
     public void setValue(String value){
         if(!validarNome(value)){
-            throw new IllegalArgumentException("Nome inválido.");
+            throw new ArgumentoInvalidoException("Nome inválido.");
         }
         this.value = value;
     }

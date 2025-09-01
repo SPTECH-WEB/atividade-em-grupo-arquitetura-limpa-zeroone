@@ -1,5 +1,7 @@
 package com.zeroone.at2.domain.valueobject;
 
+import com.zeroone.at2.domain.shared.ArgumentoInvalidoException;
+
 import java.util.regex.Pattern;
 
 public class Cpf {
@@ -8,7 +10,7 @@ public class Cpf {
 
     public static Cpf of(String valor){
         if (!regex.matcher(valor).matches()){
-            throw new IllegalArgumentException("CPF Inválido");
+            throw new ArgumentoInvalidoException("CPF Inválido");
         }
         return new Cpf(valor);
     }

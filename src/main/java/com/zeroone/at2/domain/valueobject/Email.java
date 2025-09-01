@@ -1,6 +1,8 @@
 package com.zeroone.at2.domain.valueobject;
 
 
+import com.zeroone.at2.domain.shared.ArgumentoInvalidoException;
+
 public class Email {
     private String value;
 
@@ -10,7 +12,7 @@ public class Email {
 
     private Email(String value) {
         if(!emailValido(value)){
-            throw new IllegalArgumentException("email errado.");
+            throw new ArgumentoInvalidoException("email errado.");
         };
         this.value = value;
     }

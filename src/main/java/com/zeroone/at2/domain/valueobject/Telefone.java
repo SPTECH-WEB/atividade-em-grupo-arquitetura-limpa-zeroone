@@ -1,21 +1,18 @@
 package com.zeroone.at2.domain.valueobject;
 
-public class Telefone {
-    private String value;
+import com.zeroone.at2.domain.shared.ArgumentoInvalidoException;
 
-    public static Telefone of(String value){
+public class Telefone {
+    private final String value;
+
+    public static Telefone of(String value) {
+        if (value == null || value.replaceAll("\\D", "").length() < 11) {
+            throw new ArgumentoInvalidoException("Telefone inválido");
+        }
         return new Telefone(value);
     }
 
-    private Boolean validarTelefone(){
-        assert value != null;
-        return value.length() < 10;
-    }
-
     private Telefone(String value) {
-        //if(!validarTelefone()){
-         //   throw new IllegalArgumentException("telefone invalido");
-        //}
         this.value = value;
     }
 
@@ -23,7 +20,8 @@ public class Telefone {
         return value;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

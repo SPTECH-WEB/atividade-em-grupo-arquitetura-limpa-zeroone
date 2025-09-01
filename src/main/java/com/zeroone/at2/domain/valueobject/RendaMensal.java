@@ -1,5 +1,6 @@
 package com.zeroone.at2.domain.valueobject;
 
+import com.zeroone.at2.domain.shared.ArgumentoInvalidoException;
 import com.zeroone.at2.domain.valueobject.enums.ClassificacaoRisco;
 
 public final class RendaMensal {
@@ -9,13 +10,13 @@ public final class RendaMensal {
 
     public static RendaMensal of(Double value, Integer idade){
         if (value == null) {
-            throw new IllegalArgumentException("Renda mensal não pode ser nula");
+            throw new ArgumentoInvalidoException("Renda mensal não pode ser nula");
         }
         if (value.isNaN() || value.isInfinite()) {
-            throw new IllegalArgumentException("Renda mensal inválida: " + value);
+            throw new ArgumentoInvalidoException("Renda mensal inválida: " + value);
         }
         if (value < 0) {
-            throw new IllegalArgumentException("Renda mensal não pode ser negativa");
+            throw new ArgumentoInvalidoException("Renda mensal não pode ser negativa");
         }
         return new RendaMensal(value, ClassificacaoRisco.of(value ,idade));
     }
