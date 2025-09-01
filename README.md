@@ -1,4 +1,22 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/agYdFiud)
+
+
+## Integrantes do grupo
+
+- Enrico Ferrer de Santana - 01241206
+- Fernando Henrique Santos Soares - 01241221
+- Giovanna Beltrão - 01232011
+- Gustavo Luz Barros - 01241133
+- João Pedro Gonçalves de Lima - 01241185
+- Tiago Pereira de Souza - 01241065
+
+## Como foi feita a Organizaçào 
+
+- Gustavo: Desenvolvimento inicial das entidades, fluxo de buscar clientes e refatoração final.
+- Fernando e Tiago: Desenvolvimento das entidades principais
+- João: Criação do ENUM e Lógica de Riscos
+- Giovanna: Elaboração dos Casos de Uso (Use Case)
+- Enrico: Configuração da Infraestrutura
 # 📊 API de Avaliação de Risco de Crédito
 
 Este projeto é uma prova de conceito para uma API REST que permite o cadastro de clientes e a avaliação automática de risco de crédito, baseada em critérios simples como renda e idade.
