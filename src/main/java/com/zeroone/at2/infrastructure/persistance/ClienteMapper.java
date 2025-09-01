@@ -46,6 +46,7 @@ public class ClienteMapper {
 
     public static ClienteEntityResponseDto toResponseDto(Cliente cliente){
         return new ClienteEntityResponseDto(
+                cliente.getId(),
                 cliente.getNome().getValue(),
                 cliente.getEmail().getValue(),
                 cliente.getRendaMensal().getValue(),
