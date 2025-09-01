@@ -14,7 +14,7 @@ public class ClienteConfig {
         return new CadastrarClienteUseCase(adapter);
     }
 
-d    @Bean
+    @Bean
     public BuscarClientePorIdUseCase buscarClientePorIdUseCase(ClienteJpaAdapter adapter){
         return new BuscarClientePorIdUseCase(adapter);
     }
